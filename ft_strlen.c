@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 16:33:59 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/21 17:31:14 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/10/21 17:45:54 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,3 @@ int	ft_strlen(char *str)
 		i++;
 	return (i);	
 }
-/* #include <stdio.h>
-int main (void)
-{
-	printf("%d", ft_strlen(""));
-} */
