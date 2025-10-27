@@ -6,17 +6,16 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:01:46 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/24 16:09:28 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/10/27 21:53:41 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
 	unsigned int	i;
-	char	cc;
+	char			cc;
 
 	cc = c;
 	i = 0;
@@ -27,8 +26,8 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	if (s[i] == c)
-			return ((char *)&s[i]);
-	return(NULL);
+		return ((char *)&s[i]);
+	return (NULL);
 }
 
 /* int	main(void)

@@ -1,40 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 16:02:11 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/27 21:55:47 by ineguill         ###   ########.fr       */
+/*   Created: 2025/10/27 18:57:08 by ineguill          #+#    #+#             */
+/*   Updated: 2025/10/27 19:43:53 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	*memchr(const void *s, int c, size_t n)
 {
-	unsigned int	i;
-	char			cc;
-	char			*ccc;
-
-	cc = c;
-	i = 0;
-	ccc = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			ccc = (char *)&s[i];
-		i++;
-	}
-	if (s[i] == c)
-		ccc = (char *)&s[i];
-	return (ccc);
+	
 }
-
-/* int	main(void)
-{
-	char s[] = "Welcome to 42! You'll be happy here.";
-	printf("%s\n", ft_strrchr(s, 'y'));
-	printf("%s\n", strrchr(s, 'y'));
-} */

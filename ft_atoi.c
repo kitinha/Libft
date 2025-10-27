@@ -6,9 +6,11 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 16:33:21 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/24 15:36:17 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/10/27 18:10:17 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(char *str)
 {
@@ -34,8 +36,7 @@ int	ft_atoi(char *str)
 	}
 	return (result * sign);
 }
-/* #include <stdio.h>
-#include <stdlib.h>
+/*
 int    main(void)
 {
     char    *nbr1 = " -+++-\v1837ei821";

@@ -6,9 +6,11 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:19:34 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/24 16:21:38 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/10/27 18:11:36 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {

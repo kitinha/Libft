@@ -1,40 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 16:02:11 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/27 21:55:47 by ineguill         ###   ########.fr       */
+/*   Created: 2025/10/27 18:06:59 by ineguill          #+#    #+#             */
+/*   Updated: 2025/10/27 21:52:52 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned int	i;
-	char			cc;
-	char			*ccc;
+	size_t	i;
+	size_t	j;
+	char	*temp1;
+	char	*temp2;
 
-	cc = c;
+	temp1 = (char *)dst;
+	temp2 = (char *)src;
 	i = 0;
-	ccc = 0;
-	while (s[i])
+	j = 0;
+	while (j < n)
 	{
-		if (s[i] == c)
-			ccc = (char *)&s[i];
+		temp1[i] = temp2[j];
+		j++;
 		i++;
 	}
-	if (s[i] == c)
-		ccc = (char *)&s[i];
-	return (ccc);
+	return (dst);
 }
 
 /* int	main(void)
 {
-	char s[] = "Welcome to 42! You'll be happy here.";
-	printf("%s\n", ft_strrchr(s, 'y'));
-	printf("%s\n", strrchr(s, 'y'));
+	char dst[] = "jello";
+	char src[] = "halllo";
+	int i = 0;
+	ft_memcpy(dst, src, 2);
+	while (i < 5) 
+	{
+		printf("%c", dst[i]);
+		i++;
+	}
+	printf("\n");
 } */

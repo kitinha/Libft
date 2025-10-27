@@ -6,14 +6,12 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:19:22 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/24 16:43:33 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/10/27 21:55:22 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <bsd/string.h>
+#include "libft.h"
+
 char	*ft_strnstr(const char *haystack, const char *neddle, size_t len)
 {
 	size_t	i;
@@ -32,10 +30,11 @@ char	*ft_strnstr(const char *haystack, const char *neddle, size_t len)
 	return (0);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char haystack[] = "meow meow frog frog au au";
 	char needle[] = "frog";
 	printf("%s\n", ft_strnstr(haystack, needle, 14));
 	printf("%s\n", strnstr(haystack, needle, 14));
 }
+ */
