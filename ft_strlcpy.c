@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 15:50:31 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/27 21:54:28 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/10/27 22:10:43 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,16 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	j = 0;
 	while (src[j])
 		j++;
-	while (k + 1 <= dstsize)
+	if (k + 1 < dstsize)
 	{
-		dst[i] = src[k];
-		k++;
+		while (src[k])
+		{
+			dst[i] = src[k];
+			k++;
+		}
 	}
+	else
+		dst[i] = dstsize - 1;
 	dst[i] = '\0';
 	return (j);
 }
@@ -36,8 +41,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	char dst[] = "jello";
 	char src[] = "halllo";
-	char dst2[] = "Hello!";
-	char src2[] = " How are you?";
-	printf("%zu\n", ft_strlcpy(dst, src, 2));
-	printf("%zu\n", strlcpy(dst2, src2, 2));
+	char dst2[] = "jello";
+	char src2[] = "halllo";
+	printf("%zu\n", ft_strlcpy(dst, src, 5));
+	printf("%zu\n", strlcpy(dst2, src2, 5));
 } */
