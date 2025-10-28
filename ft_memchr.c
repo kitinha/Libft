@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 18:57:08 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/28 18:32:37 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/10/28 19:55:50 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	printf("%c\n", ft_memchr(s, 'o', 6));
 	printf("%c\n", memchr(s, 'o', 6));
 } */
-int main(void)
+
+//functional main function(but why?)
+/* int main(void)
 {
     const char str[] = "Welcome to India";
 	const char str2[] = "Welcome to India";
@@ -51,4 +53,4 @@ int main(void)
     printf("'%c' Orig found at position %ld\n", ch, result - str);
 	printf("'%c' Mine found at position %ld\n", ch, result2 - str2);
     return 0;
-}
+} */

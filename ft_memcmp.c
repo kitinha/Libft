@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 18:57:23 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/28 19:41:08 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/10/28 19:57:16 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while ((i < n))
 	{
 		if (temp1[i] != temp2[i])
-		return (temp1[i] - temp2[i]);
+			return (temp1[i] - temp2[i]);
 		i++;
 	}
 	return (0);
