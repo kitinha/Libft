@@ -1,42 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 18:57:23 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/30 20:27:04 by ineguill         ###   ########.fr       */
+/*   Created: 2025/10/30 21:28:26 by ineguill          #+#    #+#             */
+/*   Updated: 2025/10/30 23:14:48 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	char	*temp1;
-	char	*temp2;
+	char	*ret;
+	int		i;
+	int		j;
 
 	i = 0;
-	if (!s1 || !s2)
-		return (NULL);
-	temp1 = (char *)s1;
-	temp2 = (char *)s2;
-	while ((i < n))
+	while (s1[i])
 	{
-		if (temp1[i] != temp2[i])
-			return (temp1[i] - temp2[i]);
+		if (s1[i] != set[0])
+			break;
 		i++;
 	}
-	return (0);
+	printf("%d", i);
+	j = ft_strlen(s1);
+	while (s1[j])
+	{
+		if (s1[j] != set[0])
+			break;
+		j--;
+	}
+	ret = ft_substr(s1, i, ft_strlen(&s1[i - j]));
+	return (ret);
 }
 
-/* int main()
+int	main(void)
 {
-	unsigned int n = 2;
-	char s2[] = "";
-	char s1[] = "";
-	printf("%d\n", ft_memcmp(s1, s2, n));
-	printf("%d\n", memcmp(s1, s2, n));
-} */
+	char s1[] = "@@@hello@world@@";
+	char *ret = ft_strtrim(s1, "@");
+	printf("%s", ret);
+}

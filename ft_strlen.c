@@ -6,13 +6,13 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 16:33:59 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/27 21:55:02 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/10/30 20:59:14 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
 

@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 18:19:42 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/28 18:00:09 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/10/30 20:27:42 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memset(void *b, int c, size_t len)
 	size_t			i;
 
 	i = 0;
+	if (!b)
+		return (NULL);
 	temp = (unsigned char *)b;
 	while (temp[i] != '\0' && i < len)
 	{

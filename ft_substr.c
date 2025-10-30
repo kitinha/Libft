@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 18:57:23 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/30 20:27:04 by ineguill         ###   ########.fr       */
+/*   Created: 2025/10/30 18:27:05 by ineguill          #+#    #+#             */
+/*   Updated: 2025/10/30 21:20:42 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	char	*temp1;
-	char	*temp2;
+	char			*ret;
+	unsigned int	i;
 
-	i = 0;
-	if (!s1 || !s2)
+	if (!s)
 		return (NULL);
-	temp1 = (char *)s1;
-	temp2 = (char *)s2;
-	while ((i < n))
+	ret = malloc((len + 1) * sizeof(char));
+	if (!ret)
+		return (NULL);
+	i = 0;
+	while (s[i])
 	{
-		if (temp1[i] != temp2[i])
-			return (temp1[i] - temp2[i]);
+		if (i == start)
+				ft_memcpy(ret, &s[start], len);
 		i++;
-	}
-	return (0);
+	}	
+	return (ret);
 }
 
-/* int main()
+/* int	main(void)
 {
-	unsigned int n = 2;
-	char s2[] = "";
-	char s1[] = "";
-	printf("%d\n", ft_memcmp(s1, s2, n));
-	printf("%d\n", memcmp(s1, s2, n));
+	char s[] = "Hello how are you my darling?";
+	char *ret = ft_substr(s, 18, 20);
+	printf ("%s", ret);
+	free (ret);
+	return (0);
 } */

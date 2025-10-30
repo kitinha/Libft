@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:19:22 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/27 21:55:22 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/10/30 20:25:15 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *haystack, const char *neddle, size_t len)
 
 	i = 0;
 	j = 0;
+	if (!haystack ||  !neddle)
+		return (NULL);
 	if (neddle[j] == '\0')
 		return ((char *)haystack);
 	while (haystack[i] && (i + j <= len))

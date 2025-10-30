@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:02:11 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/28 17:17:34 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/10/30 20:22:41 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strrchr(const char *s, int c)
 	cc = c;
 	i = 0;
 	ccc = 0;
+	if (!s)
+		return (NULL);
 	while (s[i])
 	{
 		if (s[i] == c)

@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:18:26 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/27 21:54:14 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/10/30 20:29:28 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	k = 0;
 	i = 0;
 	j = 0;
+	if (!dst || !src)
+		return (NULL);
 	while (dst[i])
 		i++;
 	while (src[j])

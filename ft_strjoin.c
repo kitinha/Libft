@@ -1,42 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 18:57:23 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/30 20:27:04 by ineguill         ###   ########.fr       */
+/*   Created: 2025/10/30 20:36:20 by ineguill          #+#    #+#             */
+/*   Updated: 2025/10/30 21:17:39 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	char	*temp1;
-	char	*temp2;
+	char	*ret;
+	int		i;
+	int		j;
 
 	i = 0;
+	j = 0;
 	if (!s1 || !s2)
 		return (NULL);
-	temp1 = (char *)s1;
-	temp2 = (char *)s2;
-	while ((i < n))
+	ret = malloc((ft_strlen(s1) + ft_strlen(s2)) * sizeof(char) + 1);
+	while (s1[i])
 	{
-		if (temp1[i] != temp2[i])
-			return (temp1[i] - temp2[i]);
+		ft_memcpy(ret, s1, ft_strlen(s1));
 		i++;
 	}
-	return (0);
+	while (s2[j])
+	{
+		ft_memcpy(ret + i, s2, ft_strlen(s2));
+		j++;
+	}
+	ret[i + j] = '\0';
+	return (ret);
 }
 
-/* int main()
+/* int	main(void)
 {
-	unsigned int n = 2;
-	char s2[] = "";
-	char s1[] = "";
-	printf("%d\n", ft_memcmp(s1, s2, n));
-	printf("%d\n", memcmp(s1, s2, n));
+	char s1[] = "Hello, ";
+	char s2[] = "how are you darling?";
+	char *ret = ft_strjoin(s1, s2);
+	printf("%s", ret);
+	free(ret);
+	return (0);
 } */
