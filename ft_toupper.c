@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 19:42:19 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/02 18:05:59 by ineguill         ###   ########.fr       */
+/*   Created: 2025/11/02 17:59:43 by ineguill          #+#    #+#             */
+/*   Updated: 2025/11/02 18:01:31 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *s)
+int	ft_toupper(int c)
 {
-	char	*ret;
-
-	if (!s)
-		return (NULL);
-	ret = ft_calloc((ft_strlen((char *)s) + 1), sizeof(char));
-	if (!ret)
-		return (NULL);
-	ft_memcpy(ret, s, ft_strlen((char *)s));
-	return (ret);
+	if (c >= 97 && c <= 122)
+		c -= 32;
+	return (c);
 }
-
-/* int main(void)
-{
-	char	*test = strdup("hello");
-	printf("str: %s\n", test);
-} */

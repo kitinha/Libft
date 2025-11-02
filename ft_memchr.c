@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 18:57:08 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/30 20:26:38 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/02 18:03:39 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
     char* result = (char*)memchr(str, ch, len);
 	char* result2 = (char*)ft_memchr(str, ch, len);
-    printf("'%c' Orig found at position %ld, in adress %p\n", ch, result - str, result);
-	printf("'%c' Mine found at position %ld, in adress %p\n", ch, result2 - str, result2);
+    printf("'%c' Orig found at %ld, in adress %p\n", ch, result - str, result);
+	printf("'%c' Mine found at %ld, in adress %p\n", ch, result2 - str, result2);
     return 0;
 }  */

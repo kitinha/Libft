@@ -1,4 +1,4 @@
-int ft_strlen(char *s)
+/* int ft_strlen(char *s)
 {
 	int i = 0;
 	while (s[i])
@@ -15,4 +15,4 @@ int	main(void)
 
 	ft_strlen(s2);
 
-}
+} */
