@@ -12,34 +12,35 @@
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char    *ft_strtrim(char const *s1, char const *set)
 {
-	char	*ret;
-	int		i;
-	int		j;
+    char    *ret;
+    int        start;
+    int        end;
+    int        len;
 
-	i = 0;
-	while (s1[i])
-	{
-		if (s1[i] != set[0])
-			break ;
-		i++;
-	}
-	printf("%d", i);
-	j = ft_strlen(s1);
-	while (s1[j])
-	{
-		if (s1[j] != set[0])
-			break ;
-		j--;
-	}
-	ret = ft_substr(s1, i, ft_strlen(&s1[i - j]));
-	return (ret);
+    start = 0;
+    end = strlen(s1);
+    if (!s1)
+        return (NULL);
+    if (!set)
+        return (NULL);
+    while (s1[start] && strchr(set, s1[start]))
+        start++;
+    while (end > start && strchr(set, s1[end - 1]))
+        end--;
+    len = end - start;
+    ret = malloc(len + 1);
+    memcpy(ret, s1 + start, len);
+    ret[len] = '\0';
+    return (ret);
 }
 
-/* int	main(void)
+int    main(void)
 {
-	char s1[] = "@@@hello@world@@";
-	char *ret = ft_strtrim(s1, "@");
-	printf("%s", ret);
-} */
+    char s1[] = "@@@hello@world@@";
+    char *ret = ft_strtrim(s1, "@");
+    printf("%s", ret);
+    free (ret);
+    return (0);
+}
