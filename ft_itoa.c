@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                           :+:      :+:    :+:   */
+/*   ft_itoa.c                                           :+:      :+:    :+:  */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -39,13 +39,17 @@ char    *ft_itoa(int n)
     char const    *number;
 
     if (n == INT_MIN)
-        return (INT_MIN)
+        return (INT_MIN) // deal with intmin
     if (n == '0')
     {
         number = "0";
         number[1] = '\0';
         return (number);
     }
+    if (n < 0)
+        // convert to positive
     number = malloc(countnum(n) + 1);
-
+    // extract digits from right to left (turn into char)
+    number[countnum(n)] = '\0';
+    return (number);
 }
