@@ -37,19 +37,30 @@ static  int countnum(int n)
 char    *ft_itoa(int n)
 {
     char const    *number;
-
-    if (n == INT_MIN)
-        return (INT_MIN) // deal with intmin
-    if (n == '0')
-    {
-        number = "0";
-        number[1] = '\0';
+    int           len;
+    int           i;
+    long          nbr;
+    
+    nbr = n;
+    i = 0;
+    len = countnum(n);
+    number = malloc((len + 1) * sizeof(char));
+    if (!number)
+        return (NULL);
+    if (number[0] == '0')
         return (number);
+    while (nbr != 0)
+    {
+        number[i] = ((nbr % 10) + '0');
+        nbr = nbr / 10;
+        i--;
     }
-    if (n < 0)
-        // convert to positive
-    number = malloc(countnum(n) + 1);
     // extract digits from right to left (turn into char)
-    number[countnum(n)] = '\0';
+    number[len] = '\0';
     return (number);
+}
+
+int main(void);
+{
+  printf("%s", ft_itoa(12345));
 }
