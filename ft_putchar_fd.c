@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 19:42:19 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/16 17:24:42 by codespace        ###   ########.fr       */
+/*   Created: 2025/11/16 16:30:39 by codespace         #+#    #+#             */
+/*   Updated: 2025/11/16 17:54:37 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+void    ft_putchar_fd(char c, int fd)
 {
-	char	*ret;
-
-	if (!s)
-		return (NULL);
-	ret = ft_calloc((ft_strlen((char *)s) + 1), sizeof(char));
-	if (!ret)
-		return (NULL);
-	ft_memcpy(ret, s, ft_strlen((char *)s));
-	return (ret);
+    write(fd, &c, 1);
 }
 
-/* int main(void)
+/*int main(void)
 {
-	char	*test = strdup("hello");
-	printf("str: %s\n", test);
-} */
+    write(1, "Hello World\n", 12);
+    write(2, "Hello Iness\n", 12);
+    ft_putchar_fd('a', 0);
+}*/

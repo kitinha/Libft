@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 19:42:19 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/16 17:24:42 by codespace        ###   ########.fr       */
+/*   Created: 2025/11/16 18:06:57 by codespace         #+#    #+#             */
+/*   Updated: 2025/11/16 18:11:24 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <fcntl.h>
 
-char	*ft_strdup(const char *s)
+void    ft_putendl_fd(char *s, int fd)
 {
-	char	*ret;
+    int i;
 
-	if (!s)
-		return (NULL);
-	ret = ft_calloc((ft_strlen((char *)s) + 1), sizeof(char));
-	if (!ret)
-		return (NULL);
-	ft_memcpy(ret, s, ft_strlen((char *)s));
-	return (ret);
+    i = 0;
+    while (s[i])
+    {
+        ft_putchar_fd(s[i], fd);
+        i++;
+    }
+    ft_putchar_fd('\n', fd);
 }
 
-/* int main(void)
+/*int main(void)
 {
-	char	*test = strdup("hello");
-	printf("str: %s\n", test);
-} */
+    int fd;
+    fd = open("O_meu_ficheiro", O_RDWR | O_CREAT | O_APPEND);
+    ft_putendl_fd("Hello World", fd);
+    close(fd);
+}*/

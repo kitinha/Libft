@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 16:43:05 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/30 21:48:06 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/16 18:51:00 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,22 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 int		ft_strncmp(char *s1, char *s2, unsigned int n);
 char	*ft_strnstr(const char *haystack, const char *neddle, size_t len);
 char	*ft_strrchr(const char *s, int c);
-/* int	ft_isalpha(int c);
+int	ft_isalpha(int c);
 int	ft_isprint(int c);
 int	ft_isalnum(int c);
 int	ft_isdigit(int c);
 int	ft_isascii(int c);
 int	ft_toupper(int c);
-int	ft_tolower(int c); */
+int	ft_tolower(int c);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strdup(const char *s);
+void    ft_putchar_fd(char c, int fd);
+void    ft_putstr_fd(char *s, int fd);
+void    ft_putstr_fd(char *s, int fd);
+void    ft_putnbr_fd(int n, int fd);
 
 #endif

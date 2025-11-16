@@ -1,6 +1,6 @@
-CC = c
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRC = ft_atoi.c ft_strcpy.c
+SRC = ft_atoi.c ft_bzero.c ft_calloc.c
 
 OBJ = $(SRC:.c=.o)
 NAME = libft.a
