@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                           :+:      :+:    :+:  */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 21:28:26 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/02 18:07:40 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/17 17:18:15 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,13 @@
 static  int countnum(int n)
 {
     int count;
-    int absn;
-
-    absn = -n;
+    
     count = 0;
-    if (n == '0')
+    if (n == 0)
         return(1);
     if (n < 0)
     {
-        n = absn;
+        n *= -1;
         count++;
     }
     while (n > 0)
@@ -36,31 +34,36 @@ static  int countnum(int n)
 
 char    *ft_itoa(int n)
 {
-    char const    *number;
-    int           len;
-    int           i;
-    long          nbr;
+    char        *number;
+    int         len;
+    long int    nbr;
     
     nbr = n;
-    i = 0;
     len = countnum(n);
     number = malloc((len + 1) * sizeof(char));
     if (!number)
         return (NULL);
-    if (number[0] == '0')
-        return (number);
-    while (nbr != 0)
+    if (nbr < 0)
     {
-        number[i] = ((nbr % 10) + '0');
-        nbr = nbr / 10;
-        i--;
+        number[0] = '-';
+        nbr *= -1;
     }
-    // extract digits from right to left (turn into char)
+    while (len >= 0 && number[len] != '-')
+    {
+        number[len] = (nbr % 10) + '0';
+        nbr /= 10;
+        len--;
+    }
     number[len] = '\0';
     return (number);
 }
 
-int main(void);
-{
-  printf("%s", ft_itoa(12345));
-}
+// int main(void)
+// {
+//     printf("%s\n", ft_itoa(12345));
+//     printf("%s\n", ft_itoa(-12345));
+//     printf("%s\n", ft_itoa(0));
+//     printf("%s\n", ft_itoa(-2147483648));
+//     printf("%s\n", ft_itoa(2147483647));
+//     return (0);
+// }

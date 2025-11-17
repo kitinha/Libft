@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 15:50:31 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/30 20:30:29 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/17 17:14:44 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	k = 0;
 	i = 0;
 	j = 0;
-	if (!dst || !src)
-		return (NULL);
 	while (src[j])
 		j++;
 	if (k + 1 < dstsize)

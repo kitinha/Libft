@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 18:57:23 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/30 20:27:04 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/17 17:10:58 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	char	*temp2;
 
 	i = 0;
-	if (!s1 || !s2)
-		return (NULL);
 	temp1 = (char *)s1;
 	temp2 = (char *)s2;
 	while ((i < n))
