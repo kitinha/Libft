@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 16:43:05 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/16 18:51:00 by codespace        ###   ########.fr       */
+/*   Updated: 2025/11/17 12:57:15 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,14 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strdup(const char *s);
 void    ft_putchar_fd(char c, int fd);
-void    ft_putstr_fd(char *s, int fd);
+void    ft_putendl_fd(char *s, int fd);
 void    ft_putstr_fd(char *s, int fd);
 void    ft_putnbr_fd(int n, int fd);
+char    *ft_itoa(int n);
+char **ft_split(const char *s, char c);
+void    ft_striteri(char *s, void (*f)(unsigned int, char*));
+char    *ft_strmapi(const char *s, char(*f)(unsigned int, char));
+int	ft_strncmp(char *s1, char *s2, unsigned int n);
+
 
 #endif
