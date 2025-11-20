@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:01:46 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/17 17:12:47 by codespace        ###   ########.fr       */
+/*   Updated: 2025/11/20 18:36:20 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strchr(const char *s, int c)
 
 	cc = c;
 	i = 0;
-	if (!s)
-		return (NULL);
 	while (s[i])
 	{
 		if (s[i] == cc)

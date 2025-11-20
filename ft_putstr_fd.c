@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 17:48:46 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/16 19:04:16 by codespace        ###   ########.fr       */
+/*   Updated: 2025/11/18 19:49:43 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <fcntl.h>
+// #include <fcntl.h>
 
-void    ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i])
-    {
-        ft_putchar_fd(s[i], fd);
-        i++;
-    }
+	i = 0;
+	while (s[i])
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
 }
 
 // int main(void)

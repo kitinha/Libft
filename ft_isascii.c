@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 17:56:48 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/02 18:01:03 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/18 19:17:48 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
-		return (c);
+		return (1);
 	else
 		return (0);
 }

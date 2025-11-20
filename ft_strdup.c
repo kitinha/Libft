@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 19:42:19 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/16 17:24:42 by codespace        ###   ########.fr       */
+/*   Updated: 2025/11/20 18:32:54 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strdup(const char *s)
 {
 	char	*ret;
 
-	if (!s)
-		return (NULL);
 	ret = ft_calloc((ft_strlen((char *)s) + 1), sizeof(char));
 	if (!ret)
 		return (NULL);

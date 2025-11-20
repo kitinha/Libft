@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 20:45:15 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/02 18:04:12 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/20 18:01:54 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	char	*ret;
 
-	if (count * size > INT_MAX)
+	if (count == 0 || size == 0)
+		return (malloc(1));
+	if (count > __SIZE_MAX__ / size)
 		return (NULL);
 	ret = malloc((count * size));
 	if (!ret)

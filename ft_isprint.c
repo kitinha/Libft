@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 17:57:20 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/02 18:00:58 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/20 18:26:05 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 127)
-		return (c);
+	if (c >= 32 && c <= 126)
+		return (1);
 	else
 		return (0);
 }

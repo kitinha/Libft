@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 17:55:13 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/02 18:00:53 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/20 18:12:08 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_isdigit(int c)
 {
-	if (c >= 0 && c <= 9)
-		return (c);
+	if (c >= '0' && c <= '9')
+		return (1);
 	else
 		return (0);
 }

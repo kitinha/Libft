@@ -3,59 +3,59 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 21:28:26 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/17 17:18:15 by codespace        ###   ########.fr       */
+/*   Updated: 2025/11/20 18:17:23 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static  int countnum(int n)
+static int	countnum(int n)
 {
-    int count;
-    
-    count = 0;
-    if (n == 0)
-        return(1);
-    if (n < 0)
-    {
-        n *= -1;
-        count++;
-    }
-    while (n > 0)
-    {
-        n /= 10;
-        count++;
-    }
-    return (count);
+	int	count;
+
+	count = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+	{
+		n *= -1;
+		count++;
+	}
+	while (n > 0)
+	{
+		n /= 10;
+		count++;
+	}
+	return (count);
 }
 
-char    *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    char        *number;
-    int         len;
-    long int    nbr;
-    
-    nbr = n;
-    len = countnum(n);
-    number = malloc((len + 1) * sizeof(char));
-    if (!number)
-        return (NULL);
-    if (nbr < 0)
-    {
-        number[0] = '-';
-        nbr *= -1;
-    }
-    while (len >= 0 && number[len] != '-')
-    {
-        number[len] = (nbr % 10) + '0';
-        nbr /= 10;
-        len--;
-    }
-    number[len] = '\0';
-    return (number);
+	char		*number;
+	int			len;
+	long int	nbr;
+
+	nbr = n;
+	len = countnum(n);
+	number = malloc((len + 1) * sizeof(char));
+	if (!number)
+		return (NULL);
+	if (nbr < 0)
+	{
+		number[0] = '-';
+		nbr *= -1;
+	}
+	while (len >= 0 && number[len] != '-')
+	{
+		number[len] = (nbr % 10) + '0';
+		nbr /= 10;
+		len--;
+	}
+	number[len] = '\0';
+	return (number);
 }
 
 // int main(void)

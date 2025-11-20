@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 18:27:05 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/02 18:06:24 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/20 18:44:58 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	while (s[i])
 	{
 		if (i == start)
-			ft_memcpy(ret, &s[start], len);
+			ft_memcpy(ret, );
 		i++;
 	}
 	return (ret);
