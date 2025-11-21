@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 18:06:59 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/20 22:08:14 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/21 21:57:52 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	temp1 = (unsigned char *)dst;
 	temp2 = (unsigned char *)src;
+	if (!dst && !src)
+		return (dst);
 	i = 0;
 	j = 0;
 	while (i < n)
@@ -38,10 +40,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char src[] = "halllo";
 	int i = 0;
 	ft_memcpy(dst, src, 2);
-	while (i < 5) 
-	{
-		printf("%c", dst[i]);
-		i++;
-	}
+	printf ("%s", dst);
 	printf("\n");
 } */

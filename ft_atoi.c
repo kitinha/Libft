@@ -6,13 +6,13 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 16:33:21 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/18 18:54:38 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/21 18:55:55 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	result;

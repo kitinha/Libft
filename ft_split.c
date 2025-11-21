@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 17:52:35 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/21 18:53:13 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/21 18:54:52 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static void	ft_free(char **s)
 
 	i = 0;
 	if (!s)
-		return (0);
+		return ;
 	while (s[i])
 	{
 		free(s[i]);

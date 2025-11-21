@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 21:28:26 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/20 18:49:30 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/21 22:04:13 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ret = malloc(len + 1);
 	if (!ret)
 		return (NULL);
-	memcpy(ret, s1 + start, len);
+	ft_memcpy(ret, s1 + start, len);
 	ret[len] = '\0';
 	return (ret);
 }
