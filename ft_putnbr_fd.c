@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 18:06:54 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/18 19:52:18 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/21 17:19:13 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		if (n == INT_MIN)
 		{
-			write (fd, "-2147483648", 12);
+			write (fd, "-2147483648", 11);
 			return ;
 		}
 		write (fd, "-", 1);

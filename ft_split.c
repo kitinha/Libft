@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 17:52:35 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/18 16:49:27 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/21 18:53:13 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,24 +33,21 @@ static int	countwords(const char *s, char c)
 
 static char	*fillwords(const char *s, char c)
 {
-	int		i;
 	int		len;
 	int		j;
 	char	*word;
 
 	len = 0;
-	i = 0;
 	j = 0;
-	while (s[len + i] && s[len + i] != c)
+	while (s[len] && s[len] != c)
 		len++;
-	word = malloc(len + 1);
+	word = ft_calloc(len + 1, sizeof(char));
 	if (!word)
 		return (NULL);
 	while (j < len)
 	{
-		word[j] = s[i];
+		word[j] = s[j];
 		j++;
-		i++;
 	}
 	word[j] = '\0';
 	return (word);
@@ -61,6 +58,8 @@ static void	ft_free(char **s)
 	int	i;
 
 	i = 0;
+	if (!s)
+		return (0);
 	while (s[i])
 	{
 		free(s[i]);
@@ -79,7 +78,7 @@ char	**ft_split(const char *s, char c)
 	j = 0;
 	i = 0;
 	words = countwords(s, c);
-	ns = malloc(words + 1 * sizeof (char *));
+	ns = ft_calloc(words + 1, sizeof(char *));
 	if (!ns)
 		return (NULL);
 	while (i < words)
@@ -93,28 +92,22 @@ char	**ft_split(const char *s, char c)
 			return (NULL);
 		}
 		j += ft_strlen(ns[i]);
+		i++;
 	}
 	return (ns);
 }
 
-// "  Hello world I am Ines"
-// Hello
-// world
-// I
-// am
-// Ines
-// '\0'
-/*int	main(void)
-{
-	char	*s = ",,Hello, World, How areyou,,";
-	char c = ',';
-	char **result = ft_split(s, c);
-	int	i = 0;
-	while (result[i])
-	{
-		printf("%s", result[i]);
-		i++;
-	}
-	free (result);
-	return (0);
-}*/
+// int	main(void)
+// {
+// 	char	s[] = "elit. Sed non risus. Suspendisse";
+// 	char c = ' ';
+// 	char **result = ft_split(s, c);
+// 	int	i = 0;
+// 	while (result[i])
+// 	{
+// 		printf("%s\n", result[i]);
+// 		i++;
+// 	}
+// 	ft_free (result);
+// 	return (0);
+// }

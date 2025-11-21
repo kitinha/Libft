@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 18:27:05 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/20 18:44:58 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/21 17:13:01 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,25 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char			*ret;
 	unsigned int	i;
+	unsigned int	slen;
 
+	slen = ft_strlen(s);
 	if (!s)
 		return (NULL);
+	if (start >= slen)
+		return (ft_strdup(""));
+	if (len > slen - start)
+		len = slen - start;
 	ret = malloc((len + 1) * sizeof(char));
 	if (!ret)
 		return (NULL);
 	i = 0;
-	while (s[i])
+	while (i < len)
 	{
-		if (i == start)
-			ft_memcpy(ret, );
+		ret[i] = s[start + i];
 		i++;
 	}
+	ret[i] = '\0';
 	return (ret);
 }
 

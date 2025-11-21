@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 20:36:20 by ineguill          #+#    #+#             */
-/*   Updated: 2025/10/30 21:17:39 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/20 18:49:48 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	ret = malloc((ft_strlen(s1) + ft_strlen(s2)) * sizeof(char) + 1);
+	if (!ret)
+		return (NULL);
 	while (s1[i])
 	{
 		ft_memcpy(ret, s1, ft_strlen(s1));

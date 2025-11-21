@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 18:19:42 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/20 18:39:34 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/20 21:55:05 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,13 @@ void	*ft_memset(void *b, int c, size_t len)
 		temp[i] = c;
 		i++;
 	}
-	return (b);
+	return (temp);
 }
 
-// int	main(void)
-// {
-// 	char b[] = "jello";
-// 	int i = 0;
-// 	ft_memset(b, '!', 5);
-// 	while (i < 5) 
-// 	{
-// 		printf("%c", b[i]);
-// 		i++;
-// 	}
-// 	printf("\n");
-// }
+/* int	main(void)
+{
+	char b[] = "jello";
+	ft_memset(b, 'A', 5);
+ 	printf ("%s", b);
+	printf("\n");
+} */

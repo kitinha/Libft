@@ -6,13 +6,13 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 21:28:26 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/20 18:17:23 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/21 17:27:18 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	countnum(int n)
+static int	countnum(long int n)
 {
 	int	count;
 
@@ -43,18 +43,17 @@ char	*ft_itoa(int n)
 	number = malloc((len + 1) * sizeof(char));
 	if (!number)
 		return (NULL);
+	number[len] = '\0';
 	if (nbr < 0)
 	{
 		number[0] = '-';
 		nbr *= -1;
 	}
-	while (len >= 0 && number[len] != '-')
+	while (--len >= 0 && number[len] != '-')
 	{
 		number[len] = (nbr % 10) + '0';
 		nbr /= 10;
-		len--;
 	}
-	number[len] = '\0';
 	return (number);
 }
 

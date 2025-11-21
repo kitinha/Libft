@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 15:50:31 by ineguill          #+#    #+#             */
-/*   Updated: 2025/11/20 18:41:12 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/21 16:03:02 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,23 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	j;
 	size_t	k;
+	size_t	j;
 
 	k = 0;
 	i = 0;
-	j = 0;
-	while (src[j])
-		j++;
-	if (j + 1 < dstsize)
+	j = ft_strlen(src);
+	if (dstsize == 0)
+		return (j);
+	else
 	{
-		while (src[k])
+		while (k < dstsize - 1 && src[k] != '\0')
 		{
 			dst[i] = src[k];
-			k++;
 			i++;
+			k++;
 		}
 	}
-	else
-		dst[i] = dstsize - 1;
 	dst[i] = '\0';
 	return (j);
 }
