@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 17:53:03 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/20 18:14:06 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/24 20:25:48 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	i = 0;
 	if (!s || !f)
-		return (0);
+		return (NULL);
 	ns = malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!ns)
 		return (NULL);
