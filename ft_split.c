@@ -78,8 +78,6 @@ char	**ft_split(const char *s, char c)
 	j = 0;
 	i = 0;
 	words = countwords(s, c);
-	if (!s)
-		retrun(NULL);
 	ns = ft_calloc(words + 1, sizeof(char *));
 	if (!ns)
 		return (NULL);
