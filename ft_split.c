@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 17:52:35 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/25 17:32:20 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/25 17:57:25 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ char	**ft_split(const char *s, char c)
 
 // int	main(void)
 // {
-// 	char	s[] = "elit. Sed non risus. Suspendisse";
+// 	char	s[] = "Hello. How  Are  you.. ";
 // 	char c = ' ';
 // 	char **result = ft_split(s, c);
 // 	int	i = 0;
