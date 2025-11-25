@@ -6,7 +6,7 @@
 /*   By: ineguill <ineguill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 17:52:35 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/21 18:54:52 by ineguill         ###   ########.fr       */
+/*   Updated: 2025/11/25 17:32:20 by ineguill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,15 +73,15 @@ char	**ft_split(const char *s, char c)
 	char	**ns;
 	int		i;
 	int		j;
-	int		words;
 
 	j = 0;
 	i = 0;
-	words = countwords(s, c);
-	ns = ft_calloc(words + 1, sizeof(char *));
+	if (!s)
+		return (NULL);
+	ns = ft_calloc(countwords(s, c) + 1, sizeof(char *));
 	if (!ns)
 		return (NULL);
-	while (i < words)
+	while (i < countwords(s, c))
 	{
 		while (s[j] == c)
 			j++;
